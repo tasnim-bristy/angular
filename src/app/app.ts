@@ -91,12 +91,24 @@ export class App {
   //   this.color=parseInt((event.target as HTMLInputElement).value);
   // }
 
-  color='blue';
-  handleColor(val:string){
-    this.color=val;
-  }
-  changeColor(event:Event){
-    this.color=(event.target as HTMLInputElement).value;
+  // color='blue';
+  // handleColor(val:string){
+  //   this.color=val;
+  // }
+  // changeColor(event:Event){
+  //   this.color=(event.target as HTMLInputElement).value;
+  // }
+
+  users=["Oreo", "Leo", "Casper", "Nimpu", "Kaltu", "Fiona", "Laltu", "Laddu", "Liona"];
+  students=[
+    {name:'Tasnim', age:21, email:'tasnim@gmail.com'},
+    {name:'Bristy', age:20, email:'bristy@gmail.com'},
+    {name:'Mushkan', age:24, email:'mushkan@gmail.com'},
+    {name:'Nargis', age:28, email:'nargis@gmail.com'}
+  ]
+
+  getName(name:string){
+    console.log(name);
   }
 }
  

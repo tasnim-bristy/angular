@@ -94,7 +94,7 @@ name="user">-->
 } -->
 
 
-<h2>Switch Case in Angular 19</h2>
+<!-- <h2>Switch Case in Angular </h2>
 <button (click)="handleColor('red')">Red</button>
 <button (click)="handleColor('green')">Green</button>
 <button (click)="handleColor('blue')">Blue</button>
@@ -117,4 +117,18 @@ name="user">-->
   @default{
     <h1 style="background-color: black; color: #fff;">No Color</h1>
   }
+} -->
+
+<h2>For Loop in Angular</h2>
+@for(user of users; track user){
+  <h2>{{user}}</h2>
+}
+<hr>
+@for(student of students; track student){
+  <h2>
+    <span>{{student.name}}</span>
+    <span>{{student.age}}</span>
+    <span>{{student.email}}</span>
+    <button (click)="getName(student.name)">Get Name</button>
+  </h2>
 }
