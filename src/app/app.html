@@ -1,4 +1,4 @@
-<app-profiles></app-profiles>
+<app-header></app-header>
 <!-- 
 <h1>Counter App</h1>
 <div style="text-align: center;">
@@ -119,7 +119,7 @@ name="user">-->
   }
 } -->
 
-<h2>For Loop in Angular</h2>
+<!-- <h2>For Loop in Angular</h2>
 @for(user of users; track user){
   <h2>{{user}}</h2>
 }
@@ -131,4 +131,128 @@ name="user">-->
     <span>{{student.email}}</span>
     <button (click)="getName(student.name)">Get Name</button>
   </h2>
-}
+} -->
+
+<!-- <h1>Basic Signals</h1>
+<h2>{{x}}</h2> -->
+<!-- <button (click)="updateValue()">Increase value</button> -->
+ <!-- <button (click)="updateValue('dec')">Decrement</button>
+ <h2>{{count()}}</h2>
+ <button (click)="updateValue('inc')">Increment</button> -->
+
+ <!-- <button (click)="count.set(count()-1)">Decrement</button>
+ <h2>{{count()}}</h2>
+ <button (click)="count.set(count()+1)">Increment</button>
+  -->
+
+  <!-- <h1>Types with Signals</h1>
+  <h2>{{data()}}</h2>
+  <h2>{{count()}}</h2>
+  <button (click)="updateSignal()">Update</button> -->
+
+   <!-- <h1>computed Signals</h1>
+   <h2>{{z()}}</h2>
+   <button (click)="showValue()">Show Value</button>
+   <button (click)="updateX()">Update X</button> -->
+
+   <!-- <h1>Effect in Angular</h1>
+   <h2>{{count()}}</h2>
+   <button (click)="userName.set('Bristy')">Update userName</button>
+   <button (click)="toggleValue()">Update Heading</button>
+   @if(displayHeading){
+    <h2 style="background-color: brown; color: #fff; text-align: center;">Page Heading</h2>
+   } -->
+
+  <!-- <h1>For Loop Contextual Variables</h1>
+
+@for (user of users; track user; let i = $index) {
+
+  @if ($first || $last) {
+    <h3 style="background-color:brown; color:#fff;">
+      This is our {{ i + 1 }} user & user name is {{ user }}
+    </h3>
+  }
+  @else {
+    <h3>
+      This is our {{ i + 1 }} user & name is {{ user }}
+    </h3>
+  } -->
+    <!-- @if($odd){
+      <h3 style="background-color: #aaa;">This is our {{i}} user and name is {{user}}</h3>
+    }
+    @if($even){
+      <h3 style="background-color: greenyellow;">This is our {{i}} user and name is {{user}}</h3>
+    }
+
+    @empty(){
+      <h2>No Record Found</h2>
+    } -->
+
+
+<!-- <h1>Two WAy Binding</h1>
+<input [(ngModel)]="name" type="text" placeholder="Enter name">
+<h2>{{name}}</h2> -->
+
+<!-- <h1>To Do List</h1>
+<input type="text" [(ngModel)]="task" placeholder="Enter New Task">
+<button (click)="addTask()">Add Task</button>
+<h1>{{task}}</h1> -->
+ <!-- @for(task of taskList; track task.id){
+  <ul class="task-list">
+    <li>{{task.task}}</li>
+    <li>{{task.id}}</li>
+    <li><button (click)="deleteTask(task.id)">Delete</button></li>
+  </ul>
+ } -->
+
+ <!-- <h1
+ [style.backgroundColor]="bgColor"
+ [style.fontSize]="fontSize"
+ >Dynamic Style</h1>
+ <h1 [style.fontSize]="zoom? headingSizeBig:headingSizeSmall">Heading</h1>
+ <button (click)="updateHeadingSize()">Toggle Font</button> -->
+
+ <!-- <h1>*ngIf Directives in Angular</h1>
+<div *ngIf="login; else elseBlock"><a href="">logout</a></div>
+<ng-template #elseBlock>
+  <a href="">login</a>
+</ng-template> -->
+
+<!-- <h1>*ngFor Directives in Angular</h1>
+<ul>
+  <li *ngFor="let student of students">{{students}}</li>
+</ul>
+<ul>
+  <li *ngFor="let student of studentsData">
+    {{student.name}}, {{student.age}}, {{student.email}}
+  </li>
+</ul> -->
+
+<!-- <h1>*ngSwitch Directives in Angular </h1>
+<button (click)="changeColor('red')">Red</button>
+<button (click)="changeColor('green')">Green</button>
+<button (click)="changeColor('yellow')">Yellow</button>
+<button (click)="changeColor('blue')">Blue</button>
+<button (click)="changeColor('pink')">Pink</button>
+<div [ngSwitch]="color">
+  <h1 *ngSwitchCase="'red'" style="background-color: red;">Red Color</h1>
+  <h1 *ngSwitchCase="'green'" style="background-color: green;">Green Color</h1>
+  <h1 *ngSwitchCase="'yellow'" style="background-color: yellow;">Yellow Color</h1>
+  <h1 *ngSwitchCase="'blue'" style="background-color: blue;">Blue Color</h1>
+  <h1 *ngSwitchCase="'pink'" style="background-color: pink;">Pink Color</h1>
+  <h1 *ngSwitchDefault>No Color Match</h1>
+</div> -->
+
+<!-- <h1>Basic Routing in Angular</h1> -->
+<ul>
+  <!-- <li>
+    <a routerLink="/login">Login</a>
+  </li>
+  <li>
+    <a routerLink="/contact">Contact</a>
+  </li>
+  <li>
+    <a routerLink="/about">About</a>
+  </li>
+</ul> -->
+<router-outlet/>

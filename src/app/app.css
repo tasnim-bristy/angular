@@ -31,3 +31,9 @@ background-color: green;
   margin: auto;
   margin-bottom: 30px;
 } */
+
+.task-list{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
