@@ -1,4 +1,5 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
+
 <!-- 
 <h1>Counter App</h1>
 <div style="text-align: center;">
@@ -244,7 +245,7 @@ name="user">-->
 </div> -->
 
 <!-- <h1>Basic Routing in Angular</h1> -->
-<ul>
+<!-- <ul> -->
   <!-- <li>
     <a routerLink="/login">Login</a>
   </li>
@@ -255,4 +256,88 @@ name="user">-->
     <a routerLink="/about">About</a>
   </li>
 </ul> -->
-<router-outlet/>
+<!-- <router-outlet/> -->
+
+
+<!-- <h1>Basic of React Forms</h1>
+<form action="" method="post">
+  <input type="text" placeholder="Enter Name" [formControl]="name">
+  <br>
+  <br>
+  <input type="text" placeholder="Enter Password" [formControl]="password">
+  <br><br>
+  <button type="button" (click)="displayValue()">Login</button>
+  <button type="button" (click)="setValue()">Set Values in Fields</button>
+  <h3>{{name.value}}</h3>
+  <h3>{{password.value}}</h3>
+</form> -->
+
+<!-- <h1>Form Grouping in Reactive Forms</h1>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <input type="text" placeholder="Enter Name" formControlName="name">
+
+  <span *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+    <span *ngIf="name?.hasError('required')">
+      Name is required
+    </span>
+  </span>
+
+  <br><br>
+
+  <input type="text" placeholder="Enter Password" formControlName="password">
+  <span *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+    <span *ngIf="password?.hasError('required')">
+      Password is required
+    </span>
+  </span>
+  <br><br>
+
+  <input type="text" placeholder="Enter Email" formControlName="email">
+  <span *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+    <span *ngIf="email?.hasError('required')">
+     Email is required
+    </span>
+  </span>
+  <br><br>
+
+  <button type="submit">
+    Submit
+  </button>
+
+</form> -->
+
+
+<!-- <h1>Template Deiven Forms</h1>
+<form #userForm="ngForm"(ngSubmit)="addDetails(userForm.value)">
+  <input type="text" placeholder="Enter Name" name="name" ngModel>
+  <br><br>
+  <input type="text" placeholder="Enter Password" name="password">
+  <br><br>
+  <select name="gender" ngModel>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br><br>
+  <input type="range" min="0" max="20" name="range" ngModel>
+  <button>Add User</button>
+</form> -->
+
+
+<!-- <h1>pass Data to child component</h1>
+ <app-user [user]="userName" city="CTG"></app-user>
+ <select #selectedUser (change)="onUserChange(selectedUser.value)">
+  <option value="Tasnim">Tasnim</option>
+  <option value="Bristy">Bristy</option>
+  <option value="Casper">Casper</option>
+  <option value="Oreo">Oreo</option>
+ </select> -->
+
+
+ <h1>Reuse component</h1>
+ <app-user></app-user>
+ @for(user of users; track user){
+
+ }

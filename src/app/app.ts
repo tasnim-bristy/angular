@@ -1,14 +1,14 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { email } from '@angular/forms/signals';
-import { Header } from './header/header';
+import { User } from './user/user';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header],
+  imports: [User],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -234,6 +234,48 @@ export class App {
   //   this.color=color;
   // }
 
+
+//   name=new FormControl('tasnim');
+//   password=new FormControl('1234')
+//   displayValue(){
+//     console.log(this.name.value, this.password.value);
+//   }
+//   setValue()
+// {
+//   this.name.setValue('bristy');
+//   this.password.setValue('4321');
+// }
+
+// profileForm= new FormGroup({
+//   name:new FormControl('', [Validators.required]),
+//   password:new FormControl('', [Validators.required,Validators.minLength(5)]),
+//   email:new FormControl('',[Validators.required, Validators.maxLength(50), Validators.pattern('[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}')] ),
+// })
+// onSubmit(){
+//   console.log(this.profileForm.value);
+// }
+// get name(){
+//   return this.profileForm.get('name');
+// }
+// get password(){
+//   return this.profileForm.get('password');
+// }
+// get email(){
+//   return this.profileForm.get('email');
+// }
+
+
+// addDetails(val:NgForm){
+//   console.log(val);
+// }
+
+
+// userName="Tasnim";
+// onUserChange(user:string){
+// this.userName=user;
+// }
+
+users=['Tasnim', 'bristy', 'oreo', 'Casper']
 
 }
  

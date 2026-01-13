@@ -5,6 +5,7 @@ import { Login } from './login/login';
 import { Home } from './home/home';
 import { PageNotFound } from './page-not-found/page-not-found';
 import { Profiles } from './profiles/profiles';
+import { User } from './user/user';
 
 export const routes: Routes = [
     {path:'about', component:About},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path:'login', component:Login},
     {path:'home', component:Home},
     {path:'profiles', component:Profiles},
+    {path:'user/:id/:name', component:User},
     {path:'**', component:PageNotFound}
 ];

@@ -1,3 +1,17 @@
-<h1>home works!</h1>
+<!-- <h1>home works!</h1>
+<a routerLink="['/profiles', {name:'tasnim bristy'}]">Go to profiles page</a> -->
 
-<a routerLink="['/profiles', {name:'tasnim bristy'}]">Go to profiles page</a>
+<!-- <h1>User List</h1>
+@for(user of users; track user.id){
+    <li><a routerLink="user/{{user.id}}">{{user.name}}</a></li>
+} -->
+
+<h1>User List</h1>
+
+@for(user of users; track user.id){
+  <li>
+    <a [routerLink]="['/user', user.id, user.name]">
+      {{user.name}}
+    </a>
+  </li>
+}
