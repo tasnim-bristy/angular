@@ -336,8 +336,58 @@ name="user">-->
  </select> -->
 
 
- <h1>Reuse component</h1>
+ <!-- <h1>Reuse component</h1>
  <app-user></app-user>
  @for(user of users; track user){
 
- }
+ } -->
+
+
+ <!-- <h1>Pass Data Child to Component</h1>
+ <app-user (getUsers)="handleUsers($event)"></app-user>
+ @for(user of users; track user){
+  <h1>{{user}}</h1>
+ } -->
+
+ <!-- <h1>Pipes in Angular</h1>
+ <h2>{{tittle}}</h2>
+ <h2>{{tittle | uppercase}}</h2>
+ <h2>{{tittle | titlecase}}</h2>
+ <h2>{{tittle | lowercase}}</h2>
+
+ <h2>{{date}}</h2>
+ <h2>{{date | date}}</h2>
+ <h2>{{date | date:'fullDate'}}</h2>
+ <h2>{{date | date:'hh:mm:ss'}}</h2>
+
+ <h2>{{amount}}</h2>
+ <h2>{{amount | currency}}</h2>
+ <h2>{{amount | currency}}</h2>
+ <h2>{{amount | currency:'EUR'}}</h2>
+ <h2>{{amount | currency:'BDT'}}</h2>
+
+ <h2>{{date | date:'fullDate' | uppercase}}</h2> -->
+
+
+ <!-- <h1>Custom Pipe in Angular</h1>
+ <h2>{{amount | currencyConvertor}}</h2> -->
+
+
+
+<!-- <h1>Life Cycle Methods in Angular</h1>
+<app-user></app-user> -->
+
+<!-- <h1>API call service</h1>
+@for(product of productList;track product.id){
+  <ul>
+    <li><b>Name: </b>{{product.title}}</li>
+    <li><b>Category: </b>{{product.category}}</li>
+    <li><b>Price: </b>{{product.price}}</li>
+    <li><b>Rating: </b>{{product.rating}}</li>
+    <li><b>Brand: </b>{{product.brand}}</li>
+    <li><img src="{{product.thumbnail}}" alt=""></li>
+  </ul>
+} -->
+
+
+<h1>API Call service</h1>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -19,6 +19,19 @@ export class User {
 //   });
 // }
 
-@Input() user:string='';
-@Input() city:string='';
+// @Input() user:string='';
+// @Input() city:string='';
+
+// @Output() getUsers = new EventEmitter();
+// users = ['Tasnim', 'Bristy', 'Casper', 'Leo'];
+// loadData(){
+//   this.getUsers.emit(this.users);
+// }
+
+constructor(){
+  console.log('constructor')
+}
+ngOnInit(){
+   
+}
 }

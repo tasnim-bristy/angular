@@ -1,14 +1,17 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { CommonModule, NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { email } from '@angular/forms/signals';
 import { User } from './user/user';
+import { CurrencyConvertorPipe } from './pipe/currency-convertor-pipe';
+import { Products } from './service/products';
+import { Users } from './services/users';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [User],
+  imports: [],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -275,7 +278,41 @@ export class App {
 // this.userName=user;
 // }
 
-users=['Tasnim', 'bristy', 'oreo', 'Casper']
+// users=['Tasnim', 'bristy', 'oreo', 'Casper']
 
+
+// users:undefined|string[];
+// handleUsers(users:string[]){
+//   console.log(users);
+//   this.users=users;
+// }
+
+
+// tittle='I Love Cats';
+// date= new Date();
+// amount=20;
+
+
+// amount =10;
+
+
+// productList:any
+// constructor(private productService:Products){}
+// ngOnInit(){
+//   this.productService.getPriductList().subscribe((data:any)=>{
+//     console.log(data);
+//     this.productList=data.products;
+//   });
+// }
+
+
+users:any;
+constructor(private userService:Users){
+}
+ngOnInit(){
+  this.userService.getUsers().subscribe((data:any)=>{
+    this.users=data;
+  })
+}
 }
  
